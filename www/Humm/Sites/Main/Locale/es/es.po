@@ -1,0 +1,84 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Humm PHP Sample\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-28 14:38+0200\n"
+"PO-Revision-Date: 2025-06-28 14:39+0200\n"
+"Last-Translator: \n"
+"Language-Team: David Esperalta <info@decsoftutils.com>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: t;e;n;ne\n"
+"X-Poedit-Basepath: ../..\n"
+"Plural-Forms: nplurals=2; plural=n !=1;\n"
+"X-Generator: Poedit 1.8.12\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: Views/About.php:5
+msgid "Humm PHP - About"
+msgstr "Humm PHP - Acerca de..."
+
+#: Views/About.php:10
+msgid ""
+"This is the About template of this Humm PHP installation. It's a template in "
+"addition to the Home one to allow you to take a look!!"
+msgstr ""
+"Esta es la plantilla Acerca de de esta instalación de Humm PHP. ¡¡Es una "
+"plantilla además de la de Inicio para que puedas echar un vistazo!!"
+
+#: Views/Home.php:5
+msgid "Humm PHP - Home"
+msgstr "Humm PHP - Portada"
+
+#: Views/Home.php:10
+msgid ""
+"This is the Home template of this Humm PHP installation. You can try also "
+"with the About template and of course add more templates!"
+msgstr ""
+"Esta es la plantilla de inicio de esta instalación de Humm PHP. ¡También "
+"puedes probar con la plantilla Acerca de y, por supuesto, añadir más "
+"plantillas!"
+
+#~ msgid "Humm PHP is ready!"
+#~ msgstr "¡Humm PHP está listo!"
+
+#~ msgid "Click to refresh this page"
+#~ msgstr "Clic para refrescar esta página"
+
+#~ msgid "Lightweight framework"
+#~ msgstr "Framework ligero"
+
+#~ msgid "Ready to go!"
+#~ msgstr "¡Todo preparado!"
+
+#~ msgid ""
+#~ "Your Humm PHP copy are ready to go. You can start modifying this Home "
+#~ "view and adding other views."
+#~ msgstr ""
+#~ "Su copia de Humm PHP está lista para usar. Puede comenzar modificando "
+#~ "esta vista Home y añadiendo otras."
+
+#~ msgid ""
+#~ "To get more information, obtain help and download the last Humm PHP "
+#~ "release visit their website at:"
+#~ msgstr ""
+#~ "Para más información, obtener ayuda y descargar la última versión de Humm "
+#~ "PHP visite su sitio web en:"
+
+#~ msgid "Visit the Humm PHP website"
+#~ msgstr "Visite el sitio web de Humm PHP"
+
+#~ msgid "Powered by Humm PHP"
+#~ msgstr "Basado en Humm PHP"
+
+#~ msgid "Choose your language from this list"
+#~ msgstr "Escoja un lenguaje de esta lista"
+
+#~ msgid "Change"
+#~ msgstr "Cambiar"
+
+#~ msgid "Press this button to change the site language"
+#~ msgstr "Pulse este botón para cambiar el lenguaje del sitio"
