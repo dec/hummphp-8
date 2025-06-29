@@ -51,7 +51,7 @@ function e (string $message, string $text_domain = Languages::DEFAULT_DOMAIN) : 
  * @param string $text_domain Optional messages text domain.
  * @return string Translated or untouched singular or plural version.
  */
-function n (string $singular, string $plural, int $count, string $text_domain = Languages::DEFAULT_DOMAIN) {
+function n (string $singular, string $plural, int $count, string $text_domain = Languages::DEFAULT_DOMAIN) : string {
 
   return Languages::nTranslate($singular, $plural, $count, $text_domain);
 }
@@ -64,7 +64,7 @@ function n (string $singular, string $plural, int $count, string $text_domain = 
  * @param int $count Number which determine what version use.
  * @param string $text_domain Optional messages text domain.
  */
-function ne (string $singular, string $plural, int $count, string $text_domain = Languages::DEFAULT_DOMAIN) {
+function ne (string $singular, string $plural, int $count, string $text_domain = Languages::DEFAULT_DOMAIN) : void {
 
   echo Languages::nTranslate($singular, $plural, $count, $text_domain);
 }
