@@ -200,9 +200,9 @@ class Database extends Unclonable {
    * @static
    * @param string $sql_query SQL statement to be prepared and executed.
    * @param array $params SQL statement arguments.
-   * @return ?string Value of the specified record field or null if not found.
+   * @return mixed Value of the specified record field or null if not found.
    */
-  public static function getValue (string $sql_query, array $params = []) : ?string {
+  public static function getValue (string $sql_query, array $params = []) : mixed {
 
     return self::$pdo->getValue($sql_query, $params);
   }
@@ -254,9 +254,9 @@ class Database extends Unclonable {
    * @param string $sql_query SQL statement to be prepared an executed.
    * @param array $params SQL statement arguments.
    * @param string $class_name Optional class name to fetch the results.
-   * @return array|object|null Specified record fields.
+   * @return mixed Specified record fields.
    */
-  public static function getRow (string $sql_query, array $params = [], string $class_name = '') : array|object|null {
+  public static function getRow (string $sql_query, array $params = [], string $class_name = '') : mixed {
 
     return self::$pdo->getRow($sql_query, $params, $class_name);
   }
