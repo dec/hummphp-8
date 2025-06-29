@@ -22,7 +22,7 @@ namespace Humm\System\Classes;
  * system error view must be displayed.
  *
  */
-class SystemErrorView extends SystemSharedView {
+final class SystemErrorView extends SystemSharedView {
 
   /**
    * Construct a SystemErrorView object.

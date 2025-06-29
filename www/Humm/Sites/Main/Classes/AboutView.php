@@ -21,7 +21,7 @@ use
  * This class is instantiated automatically by the system
  * when the site about view is required.
  */
-class AboutView extends HummView {
+final class AboutView extends HummView {
 
   public function __construct (HtmlTemplate $template) {
 

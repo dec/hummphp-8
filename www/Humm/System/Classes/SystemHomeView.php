@@ -22,7 +22,7 @@ namespace Humm\System\Classes;
  * system home view must be displayed.
  *
  */
-class SystemHomeView extends SystemSharedView {
+final class SystemHomeView extends SystemSharedView {
 
   /**
    * Construct a SystemHomeView object.

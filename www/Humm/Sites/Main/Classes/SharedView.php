@@ -21,7 +21,7 @@ use
  * This class is instantiated automatically by the system
  * when the site home view is required.
  */
-class SharedView extends HummView {
+final class SharedView extends HummView {
 
   public function __construct (HtmlTemplate $template) {
 
