@@ -18,7 +18,7 @@ use
   \Humm\System\Classes\FilterArguments,
   \Humm\System\Classes\ActionArguments;
 
-class Sample extends HummPlugin {
+final class Sample extends HummPlugin {
 
   public function execAction (ActionArguments $arguments) {
 
