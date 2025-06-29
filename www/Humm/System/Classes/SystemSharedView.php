@@ -22,7 +22,7 @@ namespace Humm\System\Classes;
  * system view must be displayed.
  *
  */
-final class SystemSharedView extends HummView {
+class SystemSharedView extends HummView {
 
   private const HUMM_SITE_URL = 'https://www.decsoftutils.com/?lang=%s';
 
