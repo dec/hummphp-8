@@ -87,9 +87,9 @@ class PDOExtended extends \PDO {
    *
    * @param string $sql_query SQL statement to be prepared and executed.
    * @param array $params SQL statement arguments.
-   * @return string Value of the specified record field.
+   * @return ?string Value of the specified record field or null if not found.
    */
-  public function getValue (string $sql_query, array $params = []) : string {
+  public function getValue (string $sql_query, array $params = []) : ?string {
 
     $result = null;
 
