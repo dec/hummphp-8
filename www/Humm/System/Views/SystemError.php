@@ -19,7 +19,7 @@
    <ul class="list-group mt-5 text-start">
     <li class="list-group-item">
      <strong><?php e('Error:') ?></strong>
-      <?= $errorInfo->error_code_str ?>
+      <?= $errorInfo->error_code_str ?> (<?= $errorInfo->error_code ?>)
     </li>
     <li class="list-group-item">
      <strong><?php e('Message:') ?></strong>
