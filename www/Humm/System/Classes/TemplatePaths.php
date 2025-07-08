@@ -21,7 +21,7 @@ namespace Humm\System\Classes;
  * right directory paths used in the requested view HTML template.
  *
  */
-class TemplatePaths extends Unclonable {
+final class TemplatePaths extends Unclonable {
 
   /**
    * Set the directory paths in which views resides.

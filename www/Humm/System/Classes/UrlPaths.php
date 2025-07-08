@@ -21,7 +21,7 @@ namespace Humm\System\Classes;
  * what is the root URL for the Humm PHP place and others.
  *
  */
-class UrlPaths extends Unclonable {
+final class UrlPaths extends Unclonable {
 
   /**
    * Root URL in which Humm PHP reside.

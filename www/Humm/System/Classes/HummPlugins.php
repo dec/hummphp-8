@@ -21,7 +21,7 @@ namespace Humm\System\Classes;
  * Manage the available plugins and provide useful
  * methods to execute actions, filters and more.
  */
-class HummPlugins extends Unclonable {
+final class HummPlugins extends Unclonable {
 
   /**
    * Define the plugins base class name.

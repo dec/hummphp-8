@@ -21,7 +21,7 @@ namespace Humm\System\Classes;
  * in order to retrieve information of the user client.
  *
  */
-class UserClient extends Unclonable {
+final class UserClient extends Unclonable {
 
   /**
    * Store the user client IP address.

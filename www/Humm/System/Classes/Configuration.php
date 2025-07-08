@@ -20,7 +20,7 @@ namespace Humm\System\Classes;
  * This is a system internal Humm PHP class and do not
  * contain useful stuff from the site point of view.
  */
-class Configuration extends Unclonable {
+final class Configuration extends Unclonable {
 
   /**
    * Setup the Humm PHP configuration.

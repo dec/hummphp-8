@@ -21,7 +21,7 @@ namespace Humm\System\Classes;
  * The idea of this class come from an old Wordpress.org PHP class
  * and provide with a way to work with localized months, days, etc.
  */
-class LocalizationMap extends Unclonable {
+final class LocalizationMap extends Unclonable {
 
   /**
    * Define the days key for use in the locale information map.

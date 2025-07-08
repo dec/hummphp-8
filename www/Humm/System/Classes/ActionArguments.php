@@ -20,7 +20,7 @@ namespace Humm\System\Classes;
  * This class can be used by system and site plugins
  * to access the executed actions arguments.
  */
-class ActionArguments extends PluginArguments {
+final class ActionArguments extends PluginArguments {
 
   /**
    * Define the name of the action ID property.

@@ -22,7 +22,7 @@ namespace Humm\System\Classes;
  * and more about it.
  *
  */
-class RequestedView extends Unclonable {
+final class RequestedView extends Unclonable {
 
   /**
    * Define the default view name for site home.

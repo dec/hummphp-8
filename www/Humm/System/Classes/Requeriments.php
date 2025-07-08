@@ -23,7 +23,7 @@ namespace Humm\System\Classes;
  * inform the user about possible requisites fails.
  *
  */
-class Requeriments extends Unclonable {
+final class Requeriments extends Unclonable {
 
   /**
    * Check for system and plugins requisites.

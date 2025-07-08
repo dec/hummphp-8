@@ -20,7 +20,7 @@ namespace Humm\System\Classes;
  * This class can be used by system and site plugins
  * to access the executed filters arguments.
  */
-class FilterArguments extends PluginArguments {
+final class FilterArguments extends PluginArguments {
 
   /**
    * Define the name of the filter ID property.

@@ -21,7 +21,7 @@ namespace Humm\System\Classes;
  * can be used by site plugins, site views, etc. in
  * order to work with the user session.
  */
-class ClientSession extends Unclonable {
+final class ClientSession extends Unclonable {
 
   /**
    * Define the user language variable

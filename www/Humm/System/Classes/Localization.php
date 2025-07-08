@@ -21,7 +21,7 @@ namespace Humm\System\Classes;
  * with locale data, for example, retrieving month
  * and day names well localized.
  */
-class Localization extends Unclonable {
+final class Localization extends Unclonable {
 
   /**
    * Locale data information.

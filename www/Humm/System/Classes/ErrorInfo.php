@@ -20,7 +20,7 @@ namespace Humm\System\Classes;
  * This class is used internally by our error handler in order
  * to encapsulate a PHP error or exception information.
  */
-class ErrorInfo extends BaseClass {
+final class ErrorInfo extends BaseClass {
 
   /**
    * Error file path.

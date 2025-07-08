@@ -20,7 +20,7 @@ namespace Humm\System\Classes;
  * This class is used internally by Humm PHP and do not offer
  * any useful stuff from the user site point of view.
  */
-class ErrorHandler extends Unclonable {
+final class ErrorHandler extends Unclonable {
 
   /**
    * Define the system error view name.

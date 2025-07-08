@@ -23,7 +23,7 @@ namespace Humm\System\Classes;
  * from the user site point of view.
  *
  */
-class ViewsHandler extends Unclonable {
+final class ViewsHandler extends Unclonable {
 
   /**
    * Define the suffix which use all HummView classes.

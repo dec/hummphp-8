@@ -21,7 +21,7 @@ namespace Humm\System\Classes;
  * user sites for string manipulation.
  *
  */
-class StrUtils extends Unclonable {
+final class StrUtils extends Unclonable {
 
   /**
    * Define a dot.

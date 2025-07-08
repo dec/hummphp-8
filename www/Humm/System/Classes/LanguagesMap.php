@@ -22,7 +22,7 @@ namespace Humm\System\Classes;
  * system Languages class and user site stuff do not
  * need to use it directly.
  */
-class LanguagesMap extends Unclonable {
+final class LanguagesMap extends Unclonable {
 
   /**
    * Available language codes/names.

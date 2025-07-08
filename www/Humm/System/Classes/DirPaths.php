@@ -20,7 +20,7 @@ namespace Humm\System\Classes;
  * This class can be used by user site classes, views
  * and plugins to retrieve well know directory paths.
  */
-class DirPaths extends Unclonable {
+final class DirPaths extends Unclonable {
 
   /**
    * Store the Humm PHP root absolute directory path.

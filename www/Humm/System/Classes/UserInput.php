@@ -21,7 +21,7 @@ namespace Humm\System\Classes;
  * appropiate input filters instead of accessing it directly.
  *
  */
-class UserInput extends Unclonable {
+final class UserInput extends Unclonable {
 
   /**
    * Retrieve an INPUT_GET variable or execute a filter.

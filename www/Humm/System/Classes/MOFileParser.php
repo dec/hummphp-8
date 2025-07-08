@@ -25,7 +25,7 @@ use Closure;
  * Credits for this class code go to Danilo Segan <danilo@kvota.net>
  * which writen it (if I am not wrong) for the PHP-Gettext project.
  */
-class MOFileParser extends Unclonable {
+final class MOFileParser extends Unclonable {
 
   /**
    * Extract the string messages from an MO file.

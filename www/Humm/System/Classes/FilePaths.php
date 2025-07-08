@@ -22,7 +22,7 @@ namespace Humm\System\Classes;
  * Humm PHP system classes, contain stuff which can
  * also be useful from the user site point of view.
  */
-class FilePaths extends Unclonable {
+final class FilePaths extends Unclonable {
 
   /**
    * Retrieve the system configuration file path.

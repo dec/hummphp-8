@@ -21,7 +21,7 @@ namespace Humm\System\Classes;
  * default variables used in the requested view HTML template.
  *
  */
-class TemplateVars extends Unclonable {
+final class TemplateVars extends Unclonable {
 
   /**
    * Set the default site view variables.

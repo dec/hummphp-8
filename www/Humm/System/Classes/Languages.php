@@ -30,7 +30,7 @@ namespace Humm\System\Classes;
  * plugins and views, remember that the best choice is to use
  * the short I18n functions: t(), e(), n() and ne().
  */
-class Languages extends Unclonable {
+final class Languages extends Unclonable {
 
   /**
    * Define the main (default) text I18n text domain.

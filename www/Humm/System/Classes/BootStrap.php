@@ -20,7 +20,7 @@ namespace Humm\System\Classes;
  * This is a system internal Humm PHP class and do not
  * contain useful stuff from the site point of view.
  */
-class BootStrap extends Unclonable {
+final class BootStrap extends Unclonable {
 
   /**
    * Initialize the Humm PHP boot strap.

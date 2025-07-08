@@ -22,7 +22,7 @@ namespace Humm\System\Classes;
  * Humm PHP system classes, contain public methos which may
  * can be useful too for site classes, views and plugins.
  */
-class UserSites extends Unclonable {
+final class UserSites extends Unclonable {
 
   /**
    * Define an specific view class of the current site.

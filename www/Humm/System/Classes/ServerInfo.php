@@ -21,7 +21,7 @@ namespace Humm\System\Classes;
  * stuff can also be useful for user sites.
  *
  */
-class ServerInfo extends Unclonable {
+final class ServerInfo extends Unclonable {
 
   /**
    * Define the localhost IP address.

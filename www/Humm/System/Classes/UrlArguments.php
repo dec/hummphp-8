@@ -69,7 +69,7 @@ namespace Humm\System\Classes;
  * URL arguments, arguments count, etc.
  *
  */
-class UrlArguments extends Unclonable {
+final class UrlArguments extends Unclonable {
 
   /**
    * Define the chars to be trimmed from the current URI.

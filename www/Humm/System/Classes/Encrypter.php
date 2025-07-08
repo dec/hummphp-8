@@ -22,7 +22,7 @@ namespace Humm\System\Classes;
  * This is another useful class to be used in the
  * Humm PHP managed sites.
  */
-class Encrypter extends Unclonable {
+final class Encrypter extends Unclonable {
 
   /**
    * Encrypt the specified text string.

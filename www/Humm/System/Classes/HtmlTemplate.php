@@ -21,7 +21,7 @@ namespace Humm\System\Classes;
  * the HTML template, add views paths and therefore display
  * the views, which can use the assigned template variables.
  */
-class HtmlTemplate extends BaseClass {
+final class HtmlTemplate extends BaseClass {
 
   /**
    * Internal variables stack.
