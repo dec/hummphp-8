@@ -20,7 +20,7 @@ use
 
 final class Sample extends HummPlugin {
 
-  public function execAction (ActionArguments $arguments) {
+  public function execAction (ActionArguments $arguments) : void {
 
     switch ($arguments->action) {
 
@@ -38,7 +38,7 @@ final class Sample extends HummPlugin {
     }
   }
 
-  public function applyFilter (FilterArguments $arguments) {
+  public function applyFilter (FilterArguments $arguments) : string {
 
     switch ($arguments->filter) {
 
