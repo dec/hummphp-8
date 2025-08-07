@@ -81,7 +81,7 @@ final class ErrorHandler extends Unclonable {
    * @param int $line_num Number of the line in which error occur.
    * @return bool True indicating we effectively handle the error.
    */
-  final public static function onError (int $code, string $message, string $file, int $line_num) : true {
+  final public static function onError (int $code, string $message, string $file, int $line_num) : bool {
 
     self::$errors[] = new ErrorInfo($code, $message, $file, $line_num);
 
