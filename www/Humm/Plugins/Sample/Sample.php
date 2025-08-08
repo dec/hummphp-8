@@ -38,7 +38,7 @@ final class Sample extends HummPlugin {
     }
   }
 
-  public function applyFilter (FilterArguments $arguments) : string {
+  public function applyFilter (FilterArguments $arguments) : mixed {
 
     switch ($arguments->filter) {
 
