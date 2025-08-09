@@ -163,6 +163,9 @@
           <a href="#hummPlugins" title="Go to this section">Humm PHP plugins</a>
           <ol>
             <li>
+              <a href="#pluginPriority" title="Go to this section">Plugin priority</a>
+            </li>
+            <li>
               <a href="#pluginFilters" title="Go to this section">Plugin filters</a>
               <ul>
                 <li><small><a href="#DATABASE_SQL" title="Go to this section">DATABASE_SQL</a></small></li>
@@ -598,7 +601,7 @@ use
 
 class ContactView extends HummView
 {
-  public function __construct(HtmlTemplate $template)
+  public function __construct (HtmlTemplate $template)
   {
     parent::__construct($template);
     $template->myNewVariable = 'Variable content';
@@ -966,6 +969,33 @@ $this->displayView('MyFooter');
           </div>
         </div>
         <!-- /documentSection -->
+        <div id="pluginPriority" class="documentsSection">
+          <h3 class="softwareIcon">
+            Plugin priority
+          </h3>
+          <p>
+           There are various plugin priorities defined at the system class "PluginPriorities". Basically a higher priority place the plugin firstly in the list of plugins, so, the filters and actions will be executed prior to other plugins on the list.
+          </p>
+          <p>
+           By default a plugin have the "PluginPriorities::LOWER" priority. If you want to change this, you can implement a "priority" method in your plugin class and return another priority for the plugin, for example:
+          </p>
+          <pre>
+namespace Humm\Plugins\Sample;
+
+use
+  \Humm\System\Classes\HummPlugin,
+  \Humm\System\Classes\PluginPriorities;
+
+final class Sample extends HummPlugin {
+
+  public function priority () : int {
+
+    return PluginPriorities::HIGHER;
+  }
+}
+   </pre>
+        </div>
+        <!-- /documentSection -->
         <div id="pluginFilters" class="documentsSection">
           <h3 class="softwareIcon">
             Plugin filters
@@ -980,10 +1010,10 @@ use
   \Humm\System\Classes\HummPlugin,
   \Humm\System\Classes\FilterArguments;
 
-class Sample extends HummPlugin
-{
-  public function applyFilter(FilterArguments $arguments)
-  {
+final class Sample extends HummPlugin {
+
+  public function applyFilter (FilterArguments $arguments) : mixed {
+
     // Filtered or not
     return $arguments->content;
   }
@@ -1002,10 +1032,10 @@ use
   \Humm\System\Classes\HummPlugin,
   \Humm\System\Classes\FilterArguments;
 
-class Sample extends HummPlugin
-{
-  public function applyFilter(FilterArguments $arguments)
-  {
+final class Sample extends HummPlugin {
+
+  public function applyFilter (FilterArguments $arguments) : mixed {
+
     switch ($arguments->filter) {
       case PluginFilters::BUFFER_OUTPUT:
         $arguments->content = \strtoupper($arguments->content);
@@ -1051,8 +1081,8 @@ class Sample extends HummPlugin
             This filter "content" is an HtmlTemplate object which the plugin can use in order to modify or add new variables in order to put availables into the site views. The plugin is responsible to return in this filter the same content, that is, the HtmlTemplate object, filtered or not, in order to do not broken the chain. This is an implementation sample of this filter:
           </p>
           <pre>
-public function applyFilter(FilterArguments $arguments)
-{
+public function applyFilter (FilterArguments $arguments) : mixed {
+
   switch ($arguments->filter) {
     case PluginFilters::VIEW_TEMPLATE:
       $arguments->content->myNewVariable = 'Variable content';
@@ -1101,10 +1131,9 @@ use
   \Humm\System\Classes\HummPlugin,
   \Humm\System\Classes\ActionArguments;
 
-class Sample extends HummPlugin
-{
-  public function execAction(ActionArguments $arguments)
-  {
+final class Sample extends HummPlugin {
+
+  public function execAction (ActionArguments $arguments) : void {
 
   }
 }
@@ -1119,10 +1148,10 @@ use
   \Humm\System\Classes\HummPlugin,
   \Humm\System\Classes\ActionArguments;
 
-class Sample extends HummPlugin
-{
-  public function execAction(ActionArguments $arguments)
-  {
+final class Sample extends HummPlugin {
+
+  public function execAction (ActionArguments $arguments) : void {
+
     switch ($arguments->action) {
       case PluginActions::PLUGINS_LOADED:
         // The plugins are loaded. Do something useful.
