@@ -212,11 +212,21 @@ final class RequestedView extends Unclonable {
       // 1º Shared sites
       // 2º Site specific
       // 3º System specific
+      // 4º Plugins specific
+
+      // Prepare the plugins views here, but, add it at the end as you see below.
+      $plugins_views = [];
+      foreach (HummPlugins::getPlugins() as $plugin) {
+        foreach (self::getDirectoryViews($plugin->viewsDir()) as $plugin_view) {
+          $plugins_views[] = $plugin_view;
+        }
+      }
 
       self::$views_dirs_paths = \array_unique(\array_merge(
         self::getDirectoryViews(DirPaths::sitesSharedViews()),
         self::getDirectoryViews(DirPaths::siteViews()),
-        self::getDirectoryViews(DirPaths::systemViews())
+        self::getDirectoryViews(DirPaths::systemViews()),
+        $plugins_views
       ));
     }
 

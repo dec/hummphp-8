@@ -148,29 +148,55 @@ final class ViewsHandler extends Unclonable {
    */
   private static function getViewObject (string $view_name, HtmlTemplate $template) : ?HummView {
 
-    $viewObject = null;
+    $view_object = null;
 
-    $sharedClass = self::SITES_SHARED_CLASS_NAMESPACE . $view_name . self::VIEW_CLASS_SUFFIX;
+    $shared_class = self::SITES_SHARED_CLASS_NAMESPACE . $view_name . self::VIEW_CLASS_SUFFIX;
 
-    $siteClass = UserSites::viewClassName($view_name);
+    $site_class = UserSites::viewClassName($view_name);
 
-    $systemClass = self::SYSTEM_CLASS_NAMESPACE . $view_name . self::VIEW_CLASS_SUFFIX;
+    $system_class = self::SYSTEM_CLASS_NAMESPACE . $view_name . self::VIEW_CLASS_SUFFIX;
 
-    // Order matter here
-    if (self::isValidViewClass($sharedClass)) {
+    // Order matter here:
 
-      $viewObject = new $sharedClass($template);
+    // 1º A possible shared view
+    if (self::isValidViewClass($shared_class)) {
 
-    } else if (self::isValidViewClass($siteClass)) {
+      $view_object = new $shared_class($template);
 
-      $viewObject = new $siteClass($template);
+    // 2º A possible site view
+    } else if (self::isValidViewClass($site_class)) {
 
-    } else if (self::isValidViewClass($systemClass)) {
+      $view_object = new $site_class($template);
 
-      $viewObject = new $systemClass($template);
+    // 3º A possible system view
+    } else if (self::isValidViewClass($system_class)) {
+
+      $view_object = new $system_class($template);
+
+    // 4º A possible plugin view
+    } else {
+
+      foreach (HummPlugins::getPlugins() as $plugin) {
+
+        $plugin_class = $plugin->classesNamespace() . $view_name . self::VIEW_CLASS_SUFFIX;
+
+        if (self::isValidViewClass($plugin_class)) {
+
+          $template->pluginViewsUrl = $plugin->viewsUrl();
+          $template->pluginViewsFilesUrl = $plugin->viewsFilesUrl();
+          $template->pluginViewsImagesUrl = $plugin->viewsImagesUrl();
+          $template->pluginViewsStylesUrl = $plugin->viewsStylesUrl();
+          $template->pluginViewsScriptsUrl = $plugin->viewsScriptsUrl();
+
+          $view_object = new $plugin_class($template);
+        }
+
+        // Do not continue looking for other possible plugins views (?)
+        break;
+      }
     }
 
-    return $viewObject;
+    return $view_object;
   }
 
   /**
