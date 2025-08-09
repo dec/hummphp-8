@@ -29,6 +29,11 @@ final class HummPlugins extends Unclonable {
   private const PLUGIN_BASE_CLASS = 'HummPlugin';
 
   /**
+   * Define the plugins priority method.
+   */
+  private const PRIORITY_METHOD = 'priority';
+
+  /**
    * Define the plugins execute action method.
    */
   private const EXEC_ACTION_METHOD = 'execAction';
@@ -116,7 +121,7 @@ final class HummPlugins extends Unclonable {
    */
   public static function execSimpleAction (int $action_id) : void {
 
-    HummPlugins::execAction(new ActionArguments([
+    self::execAction(new ActionArguments([
       ActionArguments::ACTION => $action_id
     ]));
   }
@@ -182,12 +187,27 @@ final class HummPlugins extends Unclonable {
    */
   private static function loadPlugins () :void {
 
+    $prioritized_plugins = [];
+    $unprioritized_plugins = [];
+
     foreach (self::getPluginDirs() as $plugin_dir_path) {
 
       $pluginClass = self::getPluginClass($plugin_dir_path);
 
       if (self::isValidPluginClass($pluginClass)) {
-        self::$plugins[] = new $pluginClass;
+        $unprioritized_plugins[] = new $pluginClass;
+      }
+    }
+
+    foreach ($unprioritized_plugins as $plugin) {
+      $prioritized_plugins[\call_user_func([$plugin, self::PRIORITY_METHOD])][] = $plugin;
+    }
+
+    \krsort($prioritized_plugins);
+
+    foreach ($prioritized_plugins as $priority => $plugins) {
+      foreach ($plugins as $plugin) {
+        self::$plugins[] = $plugin;
       }
     }
 
