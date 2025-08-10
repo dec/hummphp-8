@@ -55,6 +55,9 @@ User friendly URLs without requires any REWRITE MODE.
 
 Download or write your own plugins to enhance Humm PHP.
 
+### Strict type declaration ###
+
+Humm PHP source code uses PHP strict type declaration.
 
 ### And many, many more... ###
 
