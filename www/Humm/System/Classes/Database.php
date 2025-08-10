@@ -12,6 +12,8 @@
  * @copyright (C) Humm PHP - DecSoft Utils
  */
 
+declare(strict_types = 1);
+
 namespace Humm\System\Classes;
 
 /**

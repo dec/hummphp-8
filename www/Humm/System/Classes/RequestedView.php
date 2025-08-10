@@ -12,6 +12,8 @@
  * @copyright (C) Humm PHP - DecSoft Utils
  */
 
+declare(strict_types = 1);
+
 namespace Humm\System\Classes;
 
 /**
@@ -66,7 +68,7 @@ final class RequestedView extends Unclonable {
     // Check the existence of a possible "deep" view
     if (!self::isMainView($view) || !$template->viewFileExists($view)) {
 
-      $arg = \str_replace(['-', '_'], '', UrlArguments::get(0) || '');
+      $arg = \str_replace(['-', '_'], '', UrlArguments::get(0) !== null ? UrlArguments::get(0) : '');
 
       /**
        * The below code is for backward compatibility: as is mentioned above,

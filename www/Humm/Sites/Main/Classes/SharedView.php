@@ -5,9 +5,11 @@
  *
  * @author DecSoft Utils <info@decsoftutils.com>
  * @link https://www.decsoftutils.com/
- * @license https://github.com/dec/hummphp/blob/master/LICENSE
+ * @license https://github.com/dec/hummphp-8/blob/main/LICENSE
  * @copyright (C) Humm PHP - DecSoft Utils
  */
+
+declare(strict_types = 1);
 
 namespace Humm\Sites\Main\Classes;
 

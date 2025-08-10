@@ -9,9 +9,11 @@
  *
  * @author DecSoft Utils <info@decsoftutils.com>
  * @link https://www.decsoftutils.com/
- * @license https://github.com/dec/hummphp/blob/master/LICENSE
+ * @license https://github.com/dec/hummphp-8/blob/main/LICENSE
  * @copyright (C) Humm PHP - DecSoft Utils
  */
+
+declare(strict_types = 1);
 
 namespace Humm\System\Classes;
 
@@ -34,7 +36,7 @@ final class SystemHomeView extends SystemSharedView {
     parent::__construct($template);
 
     // Disallow direct user requests to this view URL
-    if (\strtolower(UrlArguments::get(0) || '') ===
+    if (\strtolower(UrlArguments::get(0) !== null ? UrlArguments::get(0) : '') ===
      \strtolower(RequestedView::SYSTEM_HOME_VIEW)) {
        UserClient::redirectToHome();
     }

@@ -9,9 +9,11 @@
  *
  * @author DecSoft Utils <info@decsoftutils.com>
  * @link https://www.decsoftutils.com/
- * @license https://github.com/dec/hummphp/blob/master/LICENSE
+ * @license https://github.com/dec/hummphp-8/blob/main/LICENSE
  * @copyright (C) Humm PHP - DecSoft Utils
  */
+
+declare(strict_types = 1);
 
 namespace Humm\System\Classes;
 
@@ -311,18 +313,17 @@ final class UserSites extends Unclonable {
    * Get an string representation of a number.
    *
    * @static
-   * @param int $number The number to be converted
+   * @param string $str_number The string number to be converted
    * @return string The entered number as chars
    */
-  private static function numToChars (int $number) : string {
+  private static function numToChars (string $str_number) : string {
 
     $result = '';
-    $string = (string)$number;
-    $str_len = \strlen($string);
+    $str_len = \strlen($str_number);
 
     for ($i = 0; $i < $str_len; $i++) {
 
-      switch ($string[$i]) {
+      switch ($str_number[$i]) {
 
         case '0': $result .= 'ze'; break;
         case '1': $result .= 'on'; break;
@@ -335,7 +336,7 @@ final class UserSites extends Unclonable {
         case '8': $result .= 'ei'; break;
         case '9': $result .= 'ni'; break;
 
-        default: $result .= $string[$i]; break;
+        default: $result .= $str_number[$i]; break;
       }
     }
 
