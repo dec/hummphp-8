@@ -14,21 +14,14 @@
 
 declare (strict_types = 1);
 
-/**
- * Register our classes autoload.
- */
-\spl_autoload_register(function (string $class_name) {
+\spl_autoload_register(function (string $class_name) : void {
 
   $class_file_path = __DIR__ . \DIRECTORY_SEPARATOR .
    \str_replace('\\', \DIRECTORY_SEPARATOR, $class_name) . '.php';
 
   if (\file_exists($class_file_path)) {
-
     require_once $class_file_path;
   }
 });
 
- /**
- * Initiates the system boot strap.
- */
 \Humm\System\Classes\BootStrap::init(__DIR__);
