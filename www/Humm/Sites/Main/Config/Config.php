@@ -43,15 +43,23 @@ declare (strict_types = 1);
 /**
  * The appropiate database user name.
  *
- * String value, empty by default
+ * String value, null by default.
  *
  */
-\define('HUMM_DATABASE_USER', '');
+\define('HUMM_DATABASE_USER', null);
 
 /**
  * The appropiate database user password.
  *
- * String value, empty by default
+ * String value, null by default.
  *
  */
-\define('HUMM_DATABASE_PASS', '');
+\define('HUMM_DATABASE_PASS', null);
+
+/**
+ * The appropiate database connection options.
+ *
+ * Array value, null by default
+ *
+ */
+\define('HUMM_DATABASE_OPTIONS', null);

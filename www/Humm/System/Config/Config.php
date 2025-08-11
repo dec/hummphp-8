@@ -51,12 +51,19 @@ if (!\defined('\HUMM_DATABASE_DSN')) {
  * Define the default Humm PHP database user.
  */
 if (!\defined('\HUMM_DATABASE_USER')) {
-  \define('HUMM_DATABASE_USER', '');
+  \define('HUMM_DATABASE_USER', null);
 }
 
 /**
  * Define the default Humm PHP database password.
  */
 if (!\defined('\HUMM_DATABASE_PASS')) {
-  \define('HUMM_DATABASE_PASS', '');
+  \define('HUMM_DATABASE_PASS', null);
+}
+
+/**
+ * Define the default Humm PHP database connection options.
+ */
+if (!\defined('\HUMM_DATABASE_OPTIONS')) {
+  \define('HUMM_DATABASE_OPTIONS', null);
 }

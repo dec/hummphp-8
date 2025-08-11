@@ -389,20 +389,20 @@ class Database extends Unclonable {
    *
    * @static
    * @param string $dsn Database connection string.
-   * @param string $user Database user name.
-   * @param string $pass Database user password.
-   * @param array $options Database connection options.
-   * @param boolean $force True to force a connection, False to not.
+   * @param ?string $user Database user name.
+   * @param ?string $password Database user password.
+   * @param ?array $options Database connection options.
+   * @param bool $force True to force a connection, False to not.
    * @return bool True on success connection, False if fail.
    */
-  public static function connect (string $dsn, string $user = '',
-   string $pass = '', array $options = [], bool $force = false) : bool {
+  public static function connect (string $dsn, ?string $user = null,
+   ?string $password = null, ?array $options = null, bool $force = false) : bool {
 
     $result = false;
 
     if (!(self::$pdo instanceof \PDO) || $force) {
 
-      self::$pdo = new PDOExtended($dsn, $user, $pass, $options);
+      self::$pdo = new PDOExtended($dsn, $user, $password, $options);
 
       $result = self::$pdo instanceof \PDO;
     }
@@ -635,7 +635,7 @@ class Database extends Unclonable {
    */
   private static function tryToConnect () : void {
 
-    if (self::connect(\HUMM_DATABASE_DSN, \HUMM_DATABASE_USER, \HUMM_DATABASE_PASS)) {
+    if (self::connect(\HUMM_DATABASE_DSN, \HUMM_DATABASE_USER, \HUMM_DATABASE_PASS, \HUMM_DATABASE_OPTIONS)) {
 
        HummPlugins::execSimpleAction(PluginActions::DATABASE_CONNECTED);
     }

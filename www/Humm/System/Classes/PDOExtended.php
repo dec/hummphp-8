@@ -57,13 +57,13 @@ class PDOExtended extends \PDO {
    * Construct a PDOExtended object.
    *
    * @param string $dsn Database connection string.
-   * @param string $user Database user name.
-   * @param string $pass Database user password.
+   * @param ?string $user Database user name.
+   * @param ?string $password Database user password.
    * @param ?array $options Database connection options.
    */
-  public function __construct (string $dsn, string $user = '', string $pass = '', ?array $options = null) {
+  public function __construct (string $dsn, ?string $user = null, ?string $password = null, ?array $options = null) {
 
-    parent::__construct($dsn, $user, $pass, $options);
+    parent::__construct($dsn, $user, $password, $options);
 
     parent::setAttribute(parent::ATTR_ERRMODE, parent::ERRMODE_EXCEPTION);
   }
