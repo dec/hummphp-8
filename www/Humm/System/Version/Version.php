@@ -16,9 +16,4 @@ declare(strict_types = 1);
 /**
  * Define the version of Humm PHP.
  */
-\define('HUMM_VERSION_STRING', '2025.8 (08-09-2025)');
-
-/**
- * Define the release date of Humm PHP.
- */
-\define('HUMM_VERSION_RELEASE', '08-09-2025');
+\define('HUMM_VERSION', '2025.8');

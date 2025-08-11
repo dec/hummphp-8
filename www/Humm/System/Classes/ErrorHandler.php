@@ -165,8 +165,7 @@ final class ErrorHandler extends Unclonable {
 
     $template->errors = self::$errors;
 
-    $template->hummVersion = \HUMM_VERSION_STRING;
-    $template->hummRelease = \HUMM_VERSION_RELEASE;
+    $template->hummVersion = \HUMM_VERSION;
 
     $template->viewName = self::ERROR_VIEW;
     $template->viewClass = new SystemErrorView($template);

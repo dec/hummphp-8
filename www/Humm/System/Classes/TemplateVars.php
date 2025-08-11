@@ -34,8 +34,7 @@ final class TemplateVars extends Unclonable {
   public static function setDefaultSiteVars (HtmlTemplate $template) : void {
 
     // Previous views code will fail if this variables are renamed
-    $template->hummVersion = \HUMM_VERSION_STRING;
-    $template->hummRelease = \HUMM_VERSION_RELEASE;
+    $template->hummVersion = \HUMM_VERSION;
 
     $template->viewName = RequestedView::getViewName($template);
     $template->lowerViewName = \strtolower($template->viewName);
