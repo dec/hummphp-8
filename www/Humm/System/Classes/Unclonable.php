@@ -28,12 +28,12 @@ namespace Humm\System\Classes;
 abstract class Unclonable extends BaseClass {
 
   /**
-   * Hide the way to construct class objects.
+   * Hide the way to construct class instances.
    */
-  private function __construct() {}
+  private function __construct () {}
 
   /**
-   * Hide the way to clone class objects.
+   * Hide the way to clone class instances.
    */
-  private function __clone() {}
+  private function __clone () {}
 }
