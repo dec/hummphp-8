@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This file implement the Humm PHP entry point.
+ * This file implements the Humm PHP entry point.
  *
  * Every user request to a Humm PHP managed site
  * end here and then Humm initiates the boot strap.
