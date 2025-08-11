@@ -17,7 +17,7 @@
  * @copyright (C) Humm PHP - DecSoft Utils
  */
 
-declare(strict_types = 1);
+declare (strict_types = 1);
 
 /**
  * Define the default Humm PHP language.
