@@ -48,9 +48,9 @@ final class ErrorInfo extends BaseClass {
   /**
    * Error code.
    *
-   * @var ?int
+   * @var mixed
    */
-  public ?int $error_code = null;
+  public mixed $error_code = null;
 
   /**
    * Error code string.
@@ -62,12 +62,12 @@ final class ErrorInfo extends BaseClass {
   /**
    * Construct an ErrorInfo object.
    *
-   * @param int $error_code Error code.
+   * @param mixed $error_code Error code.
    * @param string $message Error message.
    * @param string $file Error file path.
    * @param int $line_num Error file number.
    */
-  public function __construct (int $error_code, string $message, string $file, int $line_num) {
+  public function __construct (mixed $error_code, string $message, string $file, int $line_num) {
 
     $this->file = $file;
     $this->message = $message;
