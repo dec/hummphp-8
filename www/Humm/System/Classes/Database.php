@@ -529,7 +529,7 @@ class Database extends Unclonable {
    * @param int $param_type Hint for drivers that have alternate quoting styles.
    * @return string|false Safe quoted string or False if an error occur.
    */
-  public static function quote (string $unsafe_string, int $param_type = \Pdo::PARAM_STR) : string|false {
+  public static function quote (string $unsafe_string, int $param_type = \PDO::PARAM_STR) : string|false {
 
     return self::$pdo->quote($unsafe_string, $param_type);
   }
@@ -623,7 +623,7 @@ class Database extends Unclonable {
    * @param string $class_name Class name to fetch the results.
    * @return \PDOStatement|false object instance or False on failure.
    */
-  public function query (string $sql_query, array $params = [], string $class_name = '') : \PDOStatement|false {
+  public static function query (string $sql_query, array $params = [], string $class_name = '') : \PDOStatement|false {
 
     return self::$pdo->_query($sql_query, $params, $class_name);
   }
