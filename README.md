@@ -62,3 +62,8 @@ Humm PHP source code uses PHP strict type declaration.
 ### And many, many more... ###
 
 Discover how Humm PHP can be useful to you! Download now!
+
+### Donate ###
+
+All donations to help support this project are very welcome: https://www.paypal.me/davidesperalta
+
