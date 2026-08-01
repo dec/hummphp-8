@@ -67,6 +67,10 @@ final class ErrorHandler extends Unclonable {
 
       self::$errors = [];
 
+      if (!\HUMM_HANDLE_ERRORS) {
+        return;
+      }
+
       \set_error_handler([__CLASS__, self::ERROR_HANDLER]);
       \set_exception_handler([__CLASS__, self::EXCEPTION_HANDLER]);
       \register_shutdown_function([__CLASS__, self::SHUTDOWN_HANDLER]);
