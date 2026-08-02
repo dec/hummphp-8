@@ -16,4 +16,4 @@ declare (strict_types = 1);
 /**
  * Define the version of Humm PHP.
  */
-\define('HUMM_VERSION', '2025.8');
+\define('HUMM_VERSION', '2026.8');
