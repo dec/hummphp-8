@@ -89,6 +89,9 @@ final class ErrorHandler extends Unclonable {
    */
   final public static function onError (int $code, string $message, string $file, int $line_num) : bool {
 
+    // Log the error at the system predefined error log.
+    \error_log(\sprintf("PHP Error: %s in %s on line %d", $message, $file, $line_num));
+
     // Do not store the error if it's suppressed by the @ operator or if it's not in the error_reporting() mask.
     if (!(\error_reporting() & $code)) {
       return true;
