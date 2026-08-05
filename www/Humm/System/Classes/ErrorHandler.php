@@ -89,6 +89,11 @@ final class ErrorHandler extends Unclonable {
    */
   final public static function onError (int $code, string $message, string $file, int $line_num) : bool {
 
+    // Do not store the error if it's suppressed by the @ operator or if it's not in the error_reporting() mask.
+    if (!(\error_reporting() & $code)) {
+      return true;
+    }
+
     self::$errors[] = new ErrorInfo($code, $message, $file, $line_num);
 
     // Tells PHP don't continue executing the PHP internal error handler
